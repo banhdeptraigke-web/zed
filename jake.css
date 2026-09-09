@@ -1,0 +1,358 @@
+/* Import font chữ hệ thống tiêu chuẩn */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- TOP BAR (HEADER XANH NAVY #1E3A8A) --- */
+header {
+    background-color: #1E3A8A;
+    padding: 22px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2);
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+/* --- CONTAINER CHÍNH FULL WIDTH 100% (TRANG CHỦ) --- */
+main {
+    width: 96%;
+    max-width: 1600px;
+    margin: 0 auto 40px auto;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.5rem;
+    padding: 30px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   FORM ĐĂNG NHẬP / THÊM MỚI / SỬA (LÀM CHỮ ĐẬM RÕ NÉT)
+   ========================================================= */
+body > form, .form-container, .login-box {
+    width: 100%;
+    max-width: 480px;
+    margin: 40px auto 40px auto !important;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.1);
+    background-color: #F8FAFC; 
+    font-weight: 700 !important; 
+    color: #0f172a !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tiêu đề trong form đăng nhập / thêm / sửa */
+body > form h2, .form-container h2, .login-box h2 {
+    color: #1e293b !important;
+    font-weight: 800 !important;
+    font-size: 20px !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- THANH TÌM KIẾM --- */
+main form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.375rem;
+    padding: 14px 20px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+main form label { font-weight: 600; color: #1e293b; white-space: nowrap; font-size: 14px; }
+main form input { 
+    flex: 1; 
+    margin: 0; 
+    background: #FFFFFF !important; 
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 0.375rem;
+    padding: 10px 14px;
+    font-weight: 500;
+}
+
+/* --- BẢNG DỮ LIỆU FULL WIDTH 100% --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    border: 1px solid #CBD5E1;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 14px 16px;
+    text-align: center !important; 
+    vertical-align: middle !important; 
+    border: 1px solid #CBD5E1; 
+}
+th {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+tr:hover td { background-color: #f1f5f9; }
+td { color: #1e293b; font-weight: 500; font-size: 14px; }
+
+/* =========================================================
+   HỆ THỐNG NÚT BẤM (ĐỒNG LOẠT XANH DƯƠNG CHO LOGIN VÀ THÊM/LƯU)
+   ========================================================= */
+
+/* 1. NÚT "LOGIN", NÚT "THÊM", NÚT "LƯU", VÀ NÚT "+ TẠO VẬN ĐƠN": Xanh dương #0D6EFD */
+a.btn-action, 
+main > a > button, 
+body > form button, 
+body > form input[type="submit"], 
+.form-container button, 
+.form-container input[type="submit"],
+.login-box button {
+    background-color: #0D6EFD !important;
+    border: 1px solid #0B5ED7 !important;
+    padding: 12px 24px !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+    transition: all 0.2s ease !important;
+    width: 100%;
+}
+main > a { display: inline-block; margin-bottom: 20px; text-decoration: none; }
+main > a > button { width: auto !important; }
+
+a.btn-action:hover, 
+main > a > button:hover,
+body > form button:hover, 
+body > form input[type="submit"]:hover {
+    background-color: #0B5ED7 !important;
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.35);
+    transform: translateY(-1px);
+}
+
+/* 2. NÚT "TÌM" TRONG THANH TÌM KIẾM: Xanh dương #0D6EFD */
+main form button, main form input[type="submit"] {
+    width: auto !important;
+    background-color: #0D6EFD !important;
+    border: 1px solid #0B5ED7 !important;
+    padding: 10px 22px !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+    transition: all 0.2s ease !important;
+}
+main form button:hover {
+    background-color: #0B5ED7 !important;
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35);
+    transform: translateY(-1px);
+}
+
+/* 3. NÚT "SỬA" TRONG BẢNG: Cam nhạt #FFB74D */
+td a {
+    display: inline-block !important;
+    background-color: #FFB74D !important;
+    color: #1e293b !important;
+    padding: 6px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    box-shadow: 0 3px 8px rgba(255, 183, 77, 0.35);
+    transition: all 0.2s ease !important;
+}
+td a:hover {
+    background-color: #ffa726 !important;
+    box-shadow: 0 5px 12px rgba(255, 183, 77, 0.5);
+    transform: translateY(-1px);
+}
+
+/* --- NHÃN VÀ Ô NHẬP LIỆU TRONG FORM --- */
+label {
+    display: block;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 0 0 20px 0;
+    background: #FFFFFF;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 8px;
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 600 !important; 
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0D6EFD;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* --- NÚT TẢI ẢNH LÊN --- */
+input[type="file"] {
+    background: #FFFFFF;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #0D6EFD !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    margin-right: 12px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #0B5ED7 !important;
+}
+
+/* =========================================================
+   CĂN CHỈNH BÊN TRONG FORM (INPUT, ẢNH, NHÃN CHIẾM 100%, 2 NÚT 48%)
+   ========================================================= */
+body > form > h2,
+body > form > label,
+body > form > input,
+body > form > img,
+body > form > span,
+body > form > br {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    float: none !important;
+}
+
+/* Nút Lưu/Thêm và thẻ a bọc nút Quay về cùng chiếm chính xác 48% chiều rộng nằm cạnh nhau */
+body > form > button, 
+body > form > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48% !important;
+    flex: 0 0 48% !important;
+    padding: 0 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+    margin-top: 10px !important;
+    float: none !important;
+}
+
+/* Nút Lưu / Thêm chính (Xanh dương) */
+body > form > button {
+    background-color: #0D6EFD !important;
+    border: 1px solid #0B5ED7 !important;
+    color: #FFFFFF !important;
+    padding: 12px 0 !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+body > form > button:hover {
+    background-color: #0B5ED7 !important;
+    transform: translateY(-1px);
+}
+
+/* Thẻ a bọc ngoài nút Quay về */
+body > form > a {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Nút Quay về (Cam nhạt #FFB74D) bên trong thẻ a */
+body > form > a > button {
+    width: 100% !important;
+    padding: 12px 0 !important;
+    background-color: #FFB74D !important;
+    border: 1px solid #FFA726 !important;
+    color: #1E293B !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+}
+
+body > form > a > button:hover {
+    background-color: #ffa726 !important;
+    transform: translateY(-1px);
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 18px 20px;
+    text-align: center;
+    background-color: #F5F5F5 !important;
+    color: #424242 !important;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto; 
+    border-top: 1px solid #E0E0E0 !important;
+    font-weight: 500;
+}
+
+footer a, footer a.link-logout { 
+    color: #DC3545 !important; 
+    font-weight: 700 !important; 
+    text-decoration: none !important; 
+    transition: all 0.2s ease !important;
+}
+
+footer a:hover, footer a.link-logout:hover { 
+    color: #B02A37 !important; 
+    text-decoration: underline !important; 
+}
+
+td img { width: 60px; height: auto; border-radius: 4px; object-fit: cover; display: block; margin: 0 auto; }
