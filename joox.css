@@ -122,10 +122,8 @@ tr:hover td { background-color: #f1f5f9; }
 td { color: #1e293b; font-weight: 500; font-size: 14px; }
 
 /* =========================================================
-   HỆ THỐNG NÚT BẤM (ĐỒNG LOẠT XANH DƯƠNG CHO LOGIN VÀ THÊM/LƯU)
+   HỆ THỐNG NÚT BẤM
    ========================================================= */
-
-/* 1. NÚT "LOGIN", NÚT "THÊM", NÚT "LƯU", VÀ NÚT "+ TẠO VẬN ĐƠN": Xanh dương #0D6EFD */
 a.btn-action, 
 main > a > button, 
 body > form button, 
@@ -133,8 +131,8 @@ body > form input[type="submit"],
 .form-container button, 
 .form-container input[type="submit"],
 .login-box button {
-    background-color: #198754 !important;
-    border: 1px solid #198754 !important;
+    background-color: #0D6EFD !important;
+    border: 1px solid #0B5ED7 !important;
     padding: 12px 24px !important;
     color: #FFFFFF !important;
     border-radius: 8px !important;
@@ -161,7 +159,7 @@ body > form input[type="submit"]:hover {
     transform: translateY(-1px);
 }
 
-/* 2. NÚT "TÌM" TRONG THANH TÌM KIẾM: Xanh dương #0D6EFD */
+/* Nút tìm kiếm */
 main form button, main form input[type="submit"] {
     width: auto !important;
     background-color: #0D6EFD !important;
@@ -175,13 +173,8 @@ main form button, main form input[type="submit"] {
     box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
     transition: all 0.2s ease !important;
 }
-main form button:hover {
-    background-color: #0B5ED7 !important;
-    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.35);
-    transform: translateY(-1px);
-}
 
-/* 3. NÚT "SỬA" TRONG BẢNG: Cam nhạt #FFB74D */
+/* Nút Sửa trong bảng */
 td a {
     display: inline-block !important;
     background-color: #FFB74D !important;
@@ -229,7 +222,6 @@ input:focus {
     box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
 
-/* --- NÚT TẢI ẢNH LÊN --- */
 input[type="file"] {
     background: #FFFFFF;
     padding: 8px 12px;
@@ -245,15 +237,10 @@ input[type="file"]::file-selector-button {
     font-weight: 700 !important;
     cursor: pointer !important;
     margin-right: 12px;
-    transition: background-color 0.2s ease;
-}
-
-input[type="file"]::file-selector-button:hover {
-    background-color: #0B5ED7 !important;
 }
 
 /* =========================================================
-   CĂN CHỈNH BÊN TRONG FORM (INPUT, ẢNH, NHÃN CHIẾM 100%, 2 NÚT 48%)
+   CĂN CHỈNH BÊN TRONG FORM
    ========================================================= */
 body > form > h2,
 body > form > label,
@@ -266,7 +253,7 @@ body > form > br {
     float: none !important;
 }
 
-/* Nút Lưu/Thêm và thẻ a bọc nút Quay về cùng chiếm chính xác 48% chiều rộng nằm cạnh nhau */
+/* Nút Lưu/Thêm và thẻ a bọc nút Quay về nằm ngang 48% */
 body > form > button, 
 body > form > a {
     display: inline-flex !important;
@@ -284,7 +271,6 @@ body > form > a {
     float: none !important;
 }
 
-/* Nút Lưu / Thêm chính (Xanh dương) */
 body > form > button {
     background-color: #0D6EFD !important;
     border: 1px solid #0B5ED7 !important;
@@ -294,19 +280,12 @@ body > form > button {
     font-size: 15px !important;
 }
 
-body > form > button:hover {
-    background-color: #0B5ED7 !important;
-    transform: translateY(-1px);
-}
-
-/* Thẻ a bọc ngoài nút Quay về */
 body > form > a {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-/* Nút Quay về (Cam nhạt #FFB74D) bên trong thẻ a */
 body > form > a > button {
     width: 100% !important;
     padding: 12px 0 !important;
@@ -320,14 +299,20 @@ body > form > a > button {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.2s ease !important;
     margin: 0 !important;
 }
 
-body > form > a > button:hover {
-    background-color: #ffa726 !important;
-    transform: translateY(-1px);
+/* Định dạng riêng cho thẻ chứa link quay lại ở form phụ (như quên mật khẩu) */
+body > form > div {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+}
+body > form > div > a {
+    color: #0D6EFD !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
 }
 
 /* --- FOOTER --- */
@@ -341,18 +326,6 @@ footer {
     margin-top: auto; 
     border-top: 1px solid #E0E0E0 !important;
     font-weight: 500;
-}
-
-footer a, footer a.link-logout { 
-    color: #DC3545 !important; 
-    font-weight: 700 !important; 
-    text-decoration: none !important; 
-    transition: all 0.2s ease !important;
-}
-
-footer a:hover, footer a.link-logout:hover { 
-    color: #B02A37 !important; 
-    text-decoration: underline !important; 
 }
 
 td img { width: 60px; height: auto; border-radius: 4px; object-fit: cover; display: block; margin: 0 auto; }
