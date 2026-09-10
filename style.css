@@ -1,0 +1,261 @@
+/* Import font chữ hệ thống tiêu chuẩn */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #F0F4F9; 
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px; /* Chữ mặc định to lên */
+}
+
+/* --- TOP BAR HEADER --- */
+header {
+    background-color: #103681; 
+    padding: 18px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 26px; /* Tiêu đề to hơn */
+    text-transform: uppercase;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important; 
+}
+
+header h1 img {
+    width: auto !important; 
+    max-height: 55px !important; 
+    object-fit: contain !important;
+    border-radius: 8px !important; 
+    background-color: #fff;
+    padding: 4px;
+}
+
+/* --- CONTAINER CHÍNH --- */
+main {
+    width: 96%;
+    max-width: 1400px; 
+    margin: 0 auto 40px auto;
+    background-color: #EEF4FA !important; 
+    border: 1px solid #D4E3F0 !important;
+    border-radius: 8px; 
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   STYLE CHO NÚT & LINK NẰM TRONG MAIN (TRANG CHỦ INDEX)
+   ========================================================= */
+/* 1. Nếu chỉ dùng <a href="..."> bình thường (Không có button) */
+main > a {
+    color: #0D6EFD;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px; /* Chữ link to hơn */
+    margin-right: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+main > a:hover { color: #0B5ED7; }
+
+/* 2. Nếu dùng <a href="..."><button>...</button></a> thì nó mới thành NÚT */
+main > a > button {
+    background-color: #198754 !important; 
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important; /* Chữ nút Thêm to hơn */
+    cursor: pointer !important;
+    box-shadow: 0 2px 4px rgba(25, 135, 84, 0.2) !important;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
+
+/* Nút Đăng xuất/Login tự động chuyển màu đỏ */
+main > a[href*="logout"] > button, 
+main > a[href*="login"] > button {
+    background-color: #DC3545 !important;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2) !important;
+}
+
+main > a > button:hover { filter: brightness(0.9); transform: translateY(-1px); }
+
+/* Bỏ style link nếu có button bên trong để không bị gạch chân */
+main > a:has(button) { text-decoration: none !important; }
+
+/* Thanh tìm kiếm */
+main form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent !important; 
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    clear: both;
+}
+
+main form input { 
+    flex: 1; 
+    margin: 0; 
+    background: #FFFFFF !important; 
+    border: 1px solid #CBD5E1 !important; 
+    border-radius: 6px; 
+    padding: 12px 14px; /* Tăng lề cho ô tìm kiếm to ra */
+    font-size: 19px; /* Chữ gõ vào ô tìm kiếm to hơn */
+    outline: none;
+}
+main form input:focus { border-color: #0D6EFD !important; }
+
+main form button {
+    background-color: #0D6EFD !important; 
+    border: none !important;
+    padding: 12px 24px !important; /* Tăng lề nút tìm kiếm */
+    color: #FFFFFF !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    font-size: 16px; /* Chữ nút tìm kiếm to hơn */
+}
+
+/* BẢNG DỮ LIỆU */
+table {
+    clear: both;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden; 
+    border: 1px solid #CBD5E1;
+    background-color: #FFFFFF; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td { padding: 14px 12px; text-align: center !important; vertical-align: middle !important; }
+th { background-color: #0B4A9F !important; color: #FFFFFF !important; font-weight: 700 !important; font-size: 15px; border: none !important; } /* Cột tiêu đề to hơn */
+td { border: 1px solid #E2E8F0 !important; color: #1e293b; font-weight: 500; font-size: 16px; } /* Dữ liệu trong bảng to hơn */
+td img { width: auto; max-height: 60px; border-radius: 4px; border: 1px solid #ddd; } /* Ảnh to hơn 1 chút */
+
+/* Nút Sửa, Xóa trong bảng */
+td a {
+    display: inline-block !important;
+    background-color: #FB8C00 !important; 
+    color: #FFFFFF !important; 
+    padding: 8px 16px !important; /* Nút trong bảng to hơn */
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 14px !important; /* Chữ Sửa/Xóa to hơn */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important; 
+    margin: 0 3px;
+}
+td a[href*="xoa"], td a[href*="delete"] { background-color: #DC3545 !important; }
+td a:hover { filter: brightness(0.9); transform: translateY(-1px); }
+
+/* FOOTER */
+footer { 
+    padding: 18px 20px; text-align: center; background-color: #D6D6D6 !important; 
+    color: #1E293B !important; font-size: 16px; width: 100%; margin-top: auto; /* Chữ footer to hơn */
+    border-top: 2px solid #0D6EFD !important; font-weight: 600; 
+}
+
+/* =========================================================
+   GIAO DIỆN CÁC FORM (THÊM / SỬA / LOGIN)
+   ========================================================= */
+body > form, .form-container {
+    width: 100%; max-width: 480px; /* Form rộng ra 1 chút */
+    margin: 40px auto !important;
+    background: linear-gradient(145deg, #E8F0FE 0%, #F5F9FF 100%) !important; 
+    border: 1px solid #B6D4FE !important; border-radius: 12px !important; 
+    padding: 35px 30px; box-shadow: 0 10px 25px rgba(13, 110, 253, 0.12) !important; 
+    font-weight: 700 !important; color: #0f172a !important; 
+    font-size: 16px !important; /* Chữ ở các nhãn label trong form to hơn */
+}
+
+body > form h2, body > form h1 { color: #0B4A9F !important; font-weight: 800; font-size: 26px; text-align: center; margin-bottom: 25px; margin-top: 0;}
+
+body > form input:not([type="file"]) { 
+    width: 100%; padding: 12px; margin-bottom: 18px; margin-top: 5px; 
+    border: 1px solid #CBD5E1; border-radius: 6px; background-color: #FFFFFF !important; 
+    font-weight: 500 !important; color: #1e293b !important;
+    font-size: 16px; /* Chữ gõ trong form to hơn */
+}
+body > form input:not([type="file"]):focus { border-color: #0D6EFD; outline: none; box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25); }
+
+/* FIX LỖI MẤT MÀU NÚT CHỌN FILE (CHOOSE FILE) */
+body > form input[type="file"] {
+    width: 100%; padding: 8px 12px !important; background-color: #FFFFFF !important;
+    border: 1px dashed #0D6EFD !important; border-radius: 6px;
+    font-weight: 500 !important; margin-bottom: 18px; margin-top: 5px;
+    font-size: 15px;
+}
+body > form input[type="file"]::-webkit-file-upload-button,
+body > form input[type="file"]::file-selector-button {
+    background-color: #0D6EFD !important; color: #FFFFFF !important;
+    border: none !important; padding: 8px 16px !important; border-radius: 6px !important;
+    font-weight: 700 !important; cursor: pointer !important; margin-right: 12px !important;
+    font-size: 15px;
+}
+
+/* NÚT TÁC VỤ CHÍNH (Nút Thêm/Sửa/Login...) */
+body > form > button, body > form > input[type="submit"] { 
+    background-color: #0D6EFD !important; color: white !important; border: none !important;
+    padding: 12px 0; width: 100%; border-radius: 6px; 
+    font-weight: 700; font-size: 16px; /* Nút bự hơn */
+    cursor: pointer; margin-bottom: 10px !important; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3) !important;
+}
+
+/* FIX LỖI MÀU NÚT BACK (Áp dụng cho mọi nút nằm trong thẻ <a> ở form) */
+body > form a button {
+    background-color: #64748B !important; color: #FFFFFF !important; border: none !important;
+    padding: 12px 0 !important; width: 100% !important; border-radius: 6px !important;
+    font-weight: 700 !important; font-size: 16px !important; cursor: pointer !important; /* Nút bự hơn */
+    margin-top: 5px !important; box-shadow: 0 4px 10px rgba(100, 116, 139, 0.3) !important;
+}
+body > form a button:hover { background-color: #475569 !important; }
+
+/* =========================================================
+   FIX CĂN GIỮA LỖI ĐĂNG NHẬP VÀ NÚT QUÊN MẬT KHẨU
+   ========================================================= */
+
+/* 1. Làm đẹp và căn giữa thông báo lỗi "Sai thông tin!" */
+body > form b {
+    display: block; /* Ép thành dạng khối để chiếm toàn bộ chiều ngang */
+    text-align: center; /* Căn giữa chữ */
+    color: #DC3545 !important; /* Chữ màu đỏ báo lỗi */
+    background-color: #F8D7DA; /* Nền màu đỏ nhạt */
+    border: 1px solid #F5C6CB; /* Viền đỏ nhạt */
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.1);
+}
+
+/* Tự động ẨN hoàn toàn khung đỏ nếu không có lỗi (biến $error rỗng) */
+body > form b:empty {
+    display: none;
+}
+
+/* 2. Đảm bảo khu vực Quên mật khẩu được căn giữa hoàn hảo */
+body > form a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
